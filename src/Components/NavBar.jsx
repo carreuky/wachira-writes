@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import logo from '../images/log.png';
+
+
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <nav className="w-full bg-purple-500 shadow">
+        <nav className="w-full bg-slate-900">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                    <div className="flex items-center justify-between">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold text-white">LOGO</h2>
+                            <img className="h-32 object-cover" src={logo} />
                         </a>
                         <div className="md:hidden">
                             <button
@@ -56,32 +60,26 @@ export default function NavBar() {
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Home</a>
+                            <li className="text-white hover:text-indigo-200 hover:border-b-2 border-yellow-600 pb-4">
+                                <NavLink to='/'>HOME</NavLink>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Blog</a>
+                            <li className="text-white hover:text-indigo-200 hover:border-b-2 border-yellow-600 pb-4">
+                            <NavLink to='/about'>ABOUT</NavLink>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">About US</a>
+                            <li className="text-white hover:text-indigo-200 hover:border-b-2 border-yellow-600 pb-4">
+                            <NavLink to='/service'>SERVICES</NavLink>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">Contact US</a>
+                            <li className="text-white hover:text-indigo-200 hover:border-b-2 border-yellow-600 pb-4">
+                            <NavLink to='/contact'>CONTACT</NavLink>
                             </li>
                         </ul>
 
                         <div className="mt-3 space-y-2 lg:hidden md:inline-block">
                     <a
                         href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                        className="inline-block w-1/3 px-4 py-2 text-center text-white border-2"
                     >
-                        Sign in
-                    </a>
-                    <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
+                        GET IN TOUCH
                     </a>
                 </div>
                     </div>
@@ -89,16 +87,11 @@ export default function NavBar() {
                 <div className="hidden space-x-2 md:inline-block">
                     <a
                         href="javascript:void(0)"
-                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                        className="px-4 py-2 text-white  border-2"
                     >
-                        Sign in
+                        GET IN TOUCH
                     </a>
-                    <a
-                        href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
+                  
                 </div>
             </div>
         </nav>
