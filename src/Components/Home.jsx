@@ -1,11 +1,20 @@
 import React from "react";
 import derro from "../images/mwenyewe-r.png";
 import { NavLink } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
 
 export default function Home() {
   const myStyle = {
     marginTop: "-130px",
   };
+   const icon= <FaCheckCircle
+   style={{
+     fontSize: "30px",
+     color: "yellow",
+     marginRight: "10px",
+     marginTop:'4px'
+   }}
+ />
 
   return (
     <div>
@@ -14,9 +23,9 @@ export default function Home() {
           <h1 className=" text-6xl font-headline tracking-tight font-extrabold text-white leading-snug sm:leading-normal">
             MUTATHI WACHIRA.
           </h1>
-          <p className=" text-3xl text-amber-400">Public Speaker </p>
-          <p className="text-3xl text-amber-400">Author</p>
-          <p className="text-3xl text-amber-400">Speech writer</p>
+          <p className=" text-3xl text-amber-400 flex">{icon}Public Speaker </p>
+          <p className="text-3xl text-amber-400 flex">{icon} Author</p>
+          <p className="text-3xl text-amber-400 flex">{icon} Speech writer</p>
           <p className="lg:w-1/2 text-gray-600 lg:text-lg sm:text-base">
             {/* Give something to right i add hapa nimekosa kitu ama nime idea. */}
           </p>
