@@ -23,9 +23,9 @@ export default function Home() {
           <h1 className=" text-6xl font-headline tracking-tight font-extrabold text-white leading-snug sm:leading-normal">
             MUTATHI WACHIRA.
           </h1>
-          <p className=" text-3xl text-amber-400 flex">{icon}Public Speaker </p>
-          <p className="text-3xl text-amber-400 flex">{icon} Author</p>
-          <p className="text-3xl text-amber-400 flex">{icon} Speech writer</p>
+          <p className=" text-3xl text-amber-400 flex">Public Speaker </p>
+          <p className="text-3xl text-amber-400 flex">Author</p>
+          <p className="text-3xl text-amber-400 flex">Speech writer</p>
           <p className="lg:w-1/2 text-gray-600 lg:text-lg sm:text-base">
             {/* Give something to right i add hapa nimekosa kitu ama nime idea. */}
           </p>
