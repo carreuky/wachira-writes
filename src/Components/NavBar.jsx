@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
-import logo from '../images/log.png';
+import logo from '../images/logo1.png';
 
 
 
@@ -9,12 +9,14 @@ export default function NavBar() {
 
     return (
         <nav className="w-full bg-slate-900">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between">
-                        <a href="javascript:void(0)">
-                            <img className="h-32 object-cover" src={logo} />
+                        <a href="#" className="flex">
+                            <img className="h-20 object-fit" src={logo} />
                         </a>
+                        <h1 className="text-center text-white">Wachira Speaks <br/><span className="text-amber-500">Empowering People</span></h1>
+
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -74,7 +76,7 @@ export default function NavBar() {
                             </li>
                         </ul>
 
-                        <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                        <div className="mt-0 space-y-0 lg:hidden md:inline-block">
                     <a
                         href="javascript:void(0)"
                         className="inline-block w-1/3 px-4 py-2 text-center text-white border-2"
@@ -91,8 +93,8 @@ export default function NavBar() {
                     >
                         GET IN TOUCH
                     </a>
-                  
                 </div>
+                
             </div>
         </nav>
     );
